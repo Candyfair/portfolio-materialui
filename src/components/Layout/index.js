@@ -1,5 +1,5 @@
 // === IMPORTS
-import { Stack, Box } from '@mui/material';
+import { Stack, Box, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import NavBarMobile from 'src/components/NavBarMobile';
@@ -9,6 +9,7 @@ import TopMenu from 'src/components/TopMenu';
 const useStyles = makeStyles((theme) => ({
   layout: {
     minHeight: '100vh',
+    backgroundColor: theme.palette.background.paper,
   },
   pages: {
     flexGrow: 1,

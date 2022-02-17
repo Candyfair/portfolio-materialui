@@ -13,6 +13,10 @@ const theme = createTheme({
     success: {
       main: '#4E9A51',
     },
+    background: {
+      paper: '#9FCBB0',
+      default: '#F8F7F1',
+    },
   },
   custom: {
     shadow: {

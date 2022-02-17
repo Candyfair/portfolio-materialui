@@ -7,6 +7,8 @@ import {
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+import logo from '../../assets/images/logo.png';
+
 // === MUI
 const useStyles = makeStyles((theme) => ({
   navStyle: {
@@ -26,6 +28,7 @@ const TopMenu = () => {
     <AppBar
       position="static"
       color="transparent"
+      elevation={0}
     >
       <Stack
         direction="row"
@@ -33,9 +36,10 @@ const TopMenu = () => {
         alignItems="center"
         className={classes.navStyle}
       >
-        <Stack>
-          LOGO
-        </Stack>
+        <img
+          src={logo}
+          alt="Logo Candice's portfolio"
+        />
 
         <Stack
           direction="row"

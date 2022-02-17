@@ -1,7 +1,7 @@
 // === IMPORTS
 import { makeStyles } from '@mui/styles';
 import {
-  Stack, Typography, AppBar, autocompleteClasses,
+  Stack, Typography, AppBar,
 } from '@mui/material';
 
 // === MUI
