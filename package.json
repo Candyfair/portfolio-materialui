@@ -48,10 +48,16 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.2",
+    "@mui/styles": "^5.4.2",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
     "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
     "redux": "^4.1.2"
   }
 }
