@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
   },
   pages: {
     flexGrow: 1,
-    marginTop: theme.spacing(1),
   },
 }));
 

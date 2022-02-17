@@ -18,6 +18,13 @@ const theme = createTheme({
       default: '#F8F7F1',
     },
   },
+  typography: {
+    fontFamily: [
+      'Degular',
+      'sans-serif',
+      'Apparat',
+    ].join(','),
+  },
   custom: {
     shadow: {
       primary: '2px 12px 30px rgba(88, 88, 88, 0.13)',

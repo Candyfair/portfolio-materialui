@@ -21,8 +21,6 @@ const NavBarMobile = () => {
   return (
     <AppBar
       className={classes.navBarMobileStyle}
-      justifyContent="center"
-      alignItems="center"
       position="fixed"
     >
       <Stack
