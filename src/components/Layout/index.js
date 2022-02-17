@@ -1,5 +1,5 @@
 // === IMPORTS
-import { Stack, Box, Paper } from '@mui/material';
+import { Stack, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import NavBarMobile from 'src/components/NavBarMobile';
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pages: {
     flexGrow: 1,
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(1),
   },
 }));
 
