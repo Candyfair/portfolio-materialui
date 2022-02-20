@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
   pages: {
     flexGrow: 1,
   },
+  navbarMobile: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
 }));
 
 // === COMPONENT
@@ -28,7 +33,7 @@ const Layout = ({ children }) => {
       <Box className={classes.pages}>
         {children}
       </Box>
-      <Box>
+      <Box className={classes.navbarMobile}>
         <NavBarMobile />
       </Box>
     </Stack>

@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 import TopMenuOffset from 'src/components/TopMenu/TopMenuOffset';
+import NavBar from 'src/components/NavBar';
 import ElevationScroll from 'src/utils/utils';
 
 import logo from '../../assets/images/logo.png';
@@ -19,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
   },
   navStyle: {
     padding: theme.spacing(1),
+  },
+  navbarDesktop: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   github: {
     color: theme.palette.primary.main,
@@ -43,6 +49,7 @@ const TopMenu = (props) => {
           elevation={0}
           className={classes.navColor}
         >
+          {/* Main container with logo */}
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -55,10 +62,19 @@ const TopMenu = (props) => {
               onClick={() => navigate('/')}
             />
 
+            {/* Social icons */}
             <Stack
               direction="row"
               gap={1}
             >
+
+              {/* NavBar for desktop */}
+              <Stack
+                className={classes.navbarDesktop}
+              >
+                <NavBar />
+              </Stack>
+
               <a href="https://github.com/Candyfair" target="_blank" rel="noreferrer">
                 <GitHubIcon
                   className={classes.github}
