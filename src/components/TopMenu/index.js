@@ -1,5 +1,5 @@
 // === IMPORTS
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { makeStyles } from '@mui/styles';
 import { Stack, AppBar, Box } from '@mui/material';
