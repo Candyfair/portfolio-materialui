@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   iconStyle: {
-    color: theme.palette.common.white,
+    color: theme.palette.background.default,
   },
 }));
 

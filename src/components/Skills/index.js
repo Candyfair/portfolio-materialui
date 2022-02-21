@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Degular',
     fontSize: 32,
     fontWeight: 600,
-    color: theme.palette.common.white,
+    color: theme.palette.background.default,
   },
 }));
 
@@ -36,7 +36,9 @@ const Skills = () => {
       </Stack>
 
       {/* Contenu */}
-      <Slider />
+      <Stack>
+        <Slider />
+      </Stack>
 
     </Stack>
   );
