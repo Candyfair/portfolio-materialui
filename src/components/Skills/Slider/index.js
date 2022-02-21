@@ -24,6 +24,17 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  desktop: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  skillsDesktop: {
+    maxWidth: '30%',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '33%',
+    },
+  },
 }));
 
 // === COMPONENT
@@ -48,57 +59,74 @@ const Slider = () => {
   return (
     <Stack className={classes.containerStack}>
 
-      {/* Slider for Mobile view */}
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        className={classes.mobile}
-      >
-        {/* SLIDES */}
-        <TechSkills />
-        <ProSkills />
-        <SoftSkills />
-
-      </SwipeableViews>
-
-      {/* Navigation in slider */}
+      {/* DESKTOP */}
       <Stack
-        flexDirection="row"
-        justifyContent="center"
-        alignItems="center"
+        direction="row"
+        justifyContent="space-evenly"
+        alignItems="flex-start"
+        spacing={2}
+        className={classes.desktop}
       >
-        <MobileStepper
-          steps={maxSteps}
-          variant="dots"
-          position="static"
-          activeStep={activeStep}
-          sx={{ maxWidth: 400, flexGrow: 1 }}
-          nextButton={(
-            <IconButton
-              color="primary"
-              aria-label="upload picture"
-              component="span"
-              onClick={handleNext}
-              disabled={activeStep === maxSteps - 1}
-            >
-              <ArrowForwardIosRoundedIcon />
-            </IconButton>
-          )}
-          backButton={(
-            <IconButton
-              color="primary"
-              aria-label="upload picture"
-              component="span"
-              onClick={handleBack}
-              disabled={activeStep === 0}
-            >
-              <ArrowBackIosNewRoundedIcon />
-            </IconButton>
-          )}
-        />
+        <Stack className={classes.skillsDesktop}><TechSkills /></Stack>
+        <Stack className={classes.skillsDesktop}><ProSkills /></Stack>
+        <Stack className={classes.skillsDesktop}><SoftSkills /></Stack>
       </Stack>
+
+      {/* MOBILE */}
+      <Stack className={classes.mobile}>
+
+        {/* Slider for Mobile view */}
+        <SwipeableViews
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          enableMouseEvents
+        >
+          {/* SLIDES */}
+          <TechSkills />
+          <ProSkills />
+          <SoftSkills />
+
+        </SwipeableViews>
+
+        {/* Navigation in slider */}
+        <Stack
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <MobileStepper
+            steps={maxSteps}
+            variant="dots"
+            position="static"
+            activeStep={activeStep}
+            sx={{ maxWidth: 400, flexGrow: 1 }}
+            nextButton={(
+              <IconButton
+                color="primary"
+                aria-label="upload picture"
+                component="span"
+                onClick={handleNext}
+                disabled={activeStep === maxSteps - 1}
+              >
+                <ArrowForwardIosRoundedIcon />
+              </IconButton>
+          )}
+            backButton={(
+              <IconButton
+                color="primary"
+                aria-label="upload picture"
+                component="span"
+                onClick={handleBack}
+                disabled={activeStep === 0}
+              >
+                <ArrowBackIosNewRoundedIcon />
+              </IconButton>
+          )}
+          />
+        </Stack>
+      </Stack>
+
     </Stack>
   );
 };

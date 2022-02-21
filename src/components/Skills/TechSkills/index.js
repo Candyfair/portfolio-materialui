@@ -9,18 +9,27 @@ const useStyles = makeStyles((theme) => ({
   titleMain: {
     fontFamily: 'Degular Display',
     fontSize: 30,
+    lineHeight: 1,
+    marginBottom: theme.spacing(2),
   },
   iconStyle: {
-    marginTop: theme.spacing(1),
+    // marginTop: theme.spacing(1),
     fontSize: 28,
     color: theme.palette.success.main,
   },
   skillStack: {
     marginLeft: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+      marginLeft: theme.spacing(1.5),
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: theme.spacing(3),
+    },
   },
   titleSkill: {
     fontFamily: 'Degular Display',
     fontSize: 26,
+    lineHeight: 1,
     color: theme.palette.success.main,
   },
   description: {
@@ -94,10 +103,11 @@ const TechSkills = () => {
 
           {/* Skill details */}
           <Typography className={classes.description}>
-            Adobe Photoshop, Illustrator, Affinity Designer, Procreate,<br />
+            Adobe Photoshop, Illustrator, Affinity Designer, Procreate<br />
             InDesign, Affinity Publisher<br />
             Clip Studio Paint<br />
-            Whimsical, Figma
+            Whimsical, Figma<br />
+            Mobile first
           </Typography>
         </Stack>
       </Stack>

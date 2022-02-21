@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  logo: {
+    cursor: 'pointer',
+  },
   github: {
     color: theme.palette.primary.main,
     fontSize: 35,
@@ -59,6 +62,7 @@ const TopMenu = (props) => {
             <img
               src={logo}
               alt="Go to Homepage"
+              className={classes.logo}
               onClick={() => navigate('/')}
             />
 
