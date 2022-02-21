@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   pages: {
     flexGrow: 1,
     [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing(8),
+      marginBottom: theme.spacing(7),
     },
   },
   navbarMobile: {
