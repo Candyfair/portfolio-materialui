@@ -6,7 +6,6 @@ import {
   BottomNavigation, BottomNavigationAction, Paper,
 } from '@mui/material';
 
-import HomeIcon from '@mui/icons-material/Home';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import BookIcon from '@mui/icons-material/Book';
 import FaceIcon from '@mui/icons-material/Face';
@@ -14,12 +13,6 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
-  // navBarMobileStyle: {
-  //   top: 'auto',
-  //   bottom: 0,
-  //   padding: theme.spacing(1),
-  //   backgroundColor: theme.palette.secondary.main,
-  // },
   navbarPosition: {
     position: 'fixed',
     bottom: 0,
@@ -48,17 +41,12 @@ const NavBarMobile = () => {
         showLabels
         className={classes.navbarStyle}
       >
-        <BottomNavigationAction
-          icon={<HomeIcon />}
-          className={classes.iconStyle}
-          onClick={() => navigate('/')}
-        />
 
         <BottomNavigationAction
           label="Skills"
           icon={<ConstructionIcon />}
           className={classes.iconStyle}
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/skills')}
         />
 
         <BottomNavigationAction

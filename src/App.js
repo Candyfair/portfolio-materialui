@@ -9,6 +9,7 @@ import ScrollTop from 'src/components/ScrollTop';
 
 import {
   Home,
+  MySkills,
   Portfolio,
   About,
 } from './pages';
@@ -24,6 +25,7 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} exact />
+          <Route path="/skills" element={<MySkills />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
         </Routes>
