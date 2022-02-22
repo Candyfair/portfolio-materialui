@@ -11,8 +11,19 @@ const theme = createTheme({
       main: '#E65824',
     },
     success: {
-      main: '#4E9A51',
+      main: '#038883',
     },
+    background: {
+      paper: '#9FCBB0',
+      default: '#F8F7F1',
+    },
+  },
+  typography: {
+    fontFamily: [
+      'Degular',
+      'sans-serif',
+      'Apparat',
+    ].join(','),
   },
   custom: {
     shadow: {
