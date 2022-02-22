@@ -2,6 +2,10 @@
 import { Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
+import TitleBar from 'src/components/TitleBar';
+import AboutMe from 'src/components/AboutMe';
+import ProgrammingStory from 'src/components/ProgrammingStory';
+
 // === MUI
 const useStyles = makeStyles((theme) => ({
   myStyle: {
@@ -15,12 +19,12 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Stack
-      className={classes.myStyle}
-      justifyContent="center"
-      alignItems="center"
-    >
-      About
+    <Stack>
+      {/* Titre */}
+      <TitleBar title="About Me" />
+
+      <AboutMe />
+      <ProgrammingStory />
     </Stack>
   );
 };

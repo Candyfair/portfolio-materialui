@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   iconStyle: {
-    // marginTop: theme.spacing(1),
     fontSize: 28,
     color: theme.palette.success.main,
   },
