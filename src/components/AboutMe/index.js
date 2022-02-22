@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   containerStack: {
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(2),
+    paddingBottom: theme.spacing(4),
   },
   photo: {
     borderRadius: 25,

@@ -4,6 +4,7 @@ import { makeStyles } from '@mui/styles';
 
 import TitleBar from 'src/components/TitleBar';
 import AboutMe from 'src/components/AboutMe';
+import ProgrammingStory from 'src/components/ProgrammingStory';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +24,7 @@ const About = () => {
       <TitleBar title="About Me" />
 
       <AboutMe />
+      <ProgrammingStory />
     </Stack>
   );
 };
