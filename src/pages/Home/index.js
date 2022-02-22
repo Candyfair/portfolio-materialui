@@ -22,13 +22,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    fontFamily: 'Degular',
+    fontFamily: 'Degular, Sans-Serif',
     fontSize: 50,
     fontWeight: 700,
     lineHeight: 1,
   },
   caption: {
-    fontFamily: 'Apparat',
+    fontFamily: 'Apparat, Sans-Serif',
     fontSize: 32,
     fontWeight: 300,
     lineHeight: 1.2,

@@ -7,8 +7,10 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 // === MUI
 const useStyles = makeStyles((theme) => ({
   titleMain: {
-    fontFamily: 'Degular Display',
+    fontFamily: 'Degular Display, Sans-Serif',
     fontSize: 30,
+    fontWeight: 600,
+    fontStyle: 'normal',
     lineHeight: 1,
     marginBottom: theme.spacing(2),
   },
@@ -27,15 +29,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   titleSkill: {
-    fontFamily: 'Degular Display',
+    fontFamily: 'Degular Display, Sans-Serif',
     fontSize: 26,
+    fontWeight: 600,
+    fontStyle: 'normal',
     lineHeight: 1,
     color: theme.palette.success.main,
   },
   description: {
-    fontFamily: 'Apparat Medium',
+    fontFamily: 'Apparat Medium, Sans-Serif',
     fontSize: 20,
     fontWeight: 400,
+    fontStyle: 'normal',
     lineHeight: 1.2,
     marginBottom: theme.spacing(1.5),
     paddingRight: theme.spacing(2),

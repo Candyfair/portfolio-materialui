@@ -6,9 +6,10 @@ import { useNavigate } from 'react-router';
 // === MUI
 const useStyles = makeStyles((theme) => ({
   buttonStyle: {
+    border: `1px solid ${theme.palette.background.paper}`,
+    borderRadius: 25,
     '&:hover': {
       border: `1px solid ${theme.palette.primary.main}`,
-      borderRadius: 25,
       background: 'transparent',
     },
   },
