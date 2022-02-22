@@ -9,11 +9,17 @@ import img3 from 'src/assets/images/img3.png';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
-  containerProgramming: {
-    padding: theme.spacing(4),
+  globalContainer: {
+    backgroundImage: 'linear-gradient(to top, #f4e482, #d7ef99, #bff6b6, #b1fad3, #affbeb, #b0f7ec, #b2f3ec, #b5efec, #ade6dd, #a7ddce, #a3d4bf, #9fcbb0)',
   },
   programmingTitle: {
     backgroundColor: theme.palette.background.default,
+  },
+  containerProgramming: {
+    padding: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: '60%',
+    },
   },
   titleProg: {
     fontFamily: 'Degular',
@@ -35,7 +41,12 @@ const ProgrammmingStory = () => {
   const classes = useStyles();
 
   return (
-    <Stack spacing={3}>
+    <Stack
+      justifyContent="center"
+      alignItems="center"
+      spacing={3}
+      className={classes.globalContainer}
+    >
 
       {/* Title */}
       <Stack className={classes.programmingTitle}>
@@ -46,7 +57,7 @@ const ProgrammmingStory = () => {
 
       {/* Content */}
       <Stack
-        spacing={2}
+        spacing={4}
         justifyContent="center"
         alignItems="center"
         className={classes.containerProgramming}

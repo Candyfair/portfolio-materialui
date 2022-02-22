@@ -64,7 +64,7 @@ const Skills = () => {
     <Stack>
 
       {/* Titre */}
-      <TitleBar title="My Skills" />
+      <TitleBar title="My Skills" id="skills" />
 
       {/* Skills descriptions & slider */}
       <Stack>
