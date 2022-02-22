@@ -3,7 +3,6 @@ import { Stack } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import TitleBar from 'src/components/TitleBar';
-import AboutMe from 'src/components/AboutMe';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
@@ -14,17 +13,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // === COMPONENT
-const About = () => {
+const ProgrammmingStory = () => {
   const classes = useStyles();
 
   return (
     <Stack>
-      {/* Titre */}
-      <TitleBar title="About Me" />
+    
+        {/* Title */}
+      <TitleBar title="My programming story" />
 
-      <AboutMe />
     </Stack>
   );
 };
 
-export default About;
+export default ProgrammmingStory;

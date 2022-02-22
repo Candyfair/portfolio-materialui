@@ -60,6 +60,7 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-swipeable-views": "^0.14.0",
-    "redux": "^4.1.2"
+    "redux": "^4.1.2",
+    "webfontloader": "^1.6.28"
   }
 }

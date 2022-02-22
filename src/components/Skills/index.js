@@ -1,26 +1,14 @@
 // === IMPORTS
-import { Stack, Typography, Button } from '@mui/material';
+import { Stack, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import DownloadIcon from '@mui/icons-material/Download';
+
+import TitleBar from 'src/components/TitleBar';
 
 import Slider from './Slider';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
-  titleContainer: {
-    minWidth: '100vw',
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-    textAlign: 'center',
-    backgroundColor: theme.palette.primary.main,
-  },
-  titleStyle: {
-    fontFamily: 'Degular, Sans-Serif',
-    fontSize: 32,
-    fontWeight: 600,
-    fontStyle: 'normal',
-    color: theme.palette.background.default,
-  },
   bottomContainer: {
     backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(3),
@@ -76,11 +64,7 @@ const Skills = () => {
     <Stack>
 
       {/* Titre */}
-      <Stack className={classes.titleContainer}>
-        <Typography className={classes.titleStyle}>
-          My Skills
-        </Typography>
-      </Stack>
+      <TitleBar title="My Skills" />
 
       {/* Skills descriptions & slider */}
       <Stack>

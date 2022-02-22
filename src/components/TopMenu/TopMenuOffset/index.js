@@ -9,7 +9,7 @@ const TopMenuOffset = () => {
   const classes = useStyles();
 
   return (
-    <Box sx={{ padding: '8px 0' }} className={classes.offset} />
+    <Box sx={{ padding: '40px 0' }} className={classes.offset} />
   );
 };
 
