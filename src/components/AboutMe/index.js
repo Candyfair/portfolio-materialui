@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30,
     fontWeight: 700,
     lineHeight: 1,
-    color: theme.palette.success.main,
+    color: theme.palette.secondary.main,
   },
   textAbout: {
     fontFamily: 'Apparat',

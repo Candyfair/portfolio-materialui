@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iconStyle: {
     fontSize: 28,
-    color: theme.palette.success.main,
+    color: theme.palette.secondary.main,
   },
   skillStack: {
     marginLeft: theme.spacing(3),
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontStyle: 'normal',
     lineHeight: 1,
-    color: theme.palette.success.main,
+    color: theme.palette.secondary.main,
   },
   description: {
     fontFamily: 'Apparat Medium, Sans-Serif',
