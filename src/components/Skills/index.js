@@ -15,9 +15,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
   },
   titleStyle: {
-    fontFamily: 'Degular',
+    fontFamily: 'Degular, Sans-Serif',
     fontSize: 32,
     fontWeight: 600,
+    fontStyle: 'normal',
     color: theme.palette.background.default,
   },
   bottomContainer: {
@@ -38,8 +39,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
     color: theme.palette.background.default,
     width: 300,
-    fontFamily: 'Apparat Medium',
+    fontFamily: 'Apparat Medium, Sans-Serif',
     fontSize: 20,
+    fontWeight: 400,
+    fontStyle: 'normal',
     marginBottom: theme.spacing(1),
     '&:hover': {
       border: `1px solid ${theme.palette.background.default}`,
@@ -51,8 +54,9 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
     color: theme.palette.primary.main,
     width: 300,
-    fontFamily: 'Apparat Medium',
+    fontFamily: 'Apparat Medium, Sans-Serif',
     fontSize: 20,
+    fontStyle: 'normal',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.background.default,
