@@ -8,15 +8,11 @@ import portrait from 'src/assets/images/portrait.jpg';
 const useStyles = makeStyles((theme) => ({
   containerStack: {
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(2),
     paddingBottom: theme.spacing(4),
     flexDirection: 'column',
-    [theme.breakpoints.up('sm')]: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      margin: '0 auto',
-    },
     width: '100%',
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
   },
   textContainer: {
     padding: theme.spacing(2),
@@ -26,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   },
   photo: {
     borderRadius: 25,
+    [theme.breakpoints.up('sm')]: {
+      borderRadius: '33% 67% 66% 34% / 37% 38% 62% 63%',
+    },
     padding: theme.spacing(2),
   },
   titleAbout: {
