@@ -136,8 +136,8 @@ const TechSkills = () => {
 
           {/* Skill details */}
           <Typography className={classes.description}>
-            Shopify, Squarespace<br />
-            Google analytics
+            Shopify, Squarespace,<br />
+            SEO
           </Typography>
         </Stack>
       </Stack>

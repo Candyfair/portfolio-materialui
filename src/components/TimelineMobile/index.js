@@ -14,6 +14,8 @@ import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
+import arrow from 'src/assets/images/arrow.png';
+
 import stories from 'src/data/story';
 
 import TitleBar from 'src/components/TitleBar';
@@ -48,6 +50,24 @@ const useStyles = makeStyles((theme) => ({
   },
   iconStyle: {
     color: theme.palette.secondary.main,
+  },
+  arrowStyle: {
+    position: 'fixed',
+    bottom: 60,
+    right: theme.spacing(1),
+  },
+  clicPosition: {
+    backgroundColor: '#f25a17',
+    borderRadius: 15,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    width: 130,
+  },
+  clicStyle: {
+    color: theme.palette.background.default,
+    fontFamily: 'Apparat',
+    fontSize: 22,
+    fontWeight: 300,
   },
 }));
 
@@ -89,6 +109,13 @@ const TimelineMobile = () => {
           src={img1}
           alt="Amstrad CPC 464"
         />
+
+        {/* Reset link */}
+        {activeStep === stories.length && (
+        <Stack className={classes.resetLink}>
+          <Button onClick={handleReset}>Start again</Button>
+        </Stack>
+        )}
 
         {/* Stepper */}
         <Box sx={{ maxWidth: 400 }}>
@@ -133,13 +160,19 @@ const TimelineMobile = () => {
               </Step>
             ))}
           </Stepper>
+
           {activeStep === stories.length && (
-          <Paper square elevation={0} sx={{ p: 3 }}>
-            <Typography>All steps completed - you&apos;re finished</Typography>
-            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-              Reset
-            </Button>
-          </Paper>
+          <Stack
+            justifyContent="center"
+            alignItems="center"
+            spacing={1}
+            className={classes.arrowStyle}
+          >
+            <Box className={classes.clicPosition}>
+              <Typography className={classes.clicStyle}>Hire me!</Typography>
+            </Box>
+            <img src={arrow} alt="arrow" />
+          </Stack>
           )}
         </Box>
 

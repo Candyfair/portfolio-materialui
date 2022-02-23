@@ -83,7 +83,8 @@ const AboutMe = () => {
           JavaScript and ReactJS.
         </Typography>
         <Typography className={classes.textAbout}>
-          My goal is to fill the world with my creations, and make people happy in the process.
+          My aim is to work in an international environment where I can use all of my creative,
+          problem solving and management skills to deliver innovative solutions.
         </Typography>
       </Stack>
     </Stack>
