@@ -13,7 +13,6 @@ const story = [
     id: 3,
     year: 1995,
     description: 'At home, we now have a computer that reads 5¼" floppy disks, and a dot-matrix printer. My mom teaches me how to use MS Office suite and I start writing my first novel. After 150 pages and a hard drive crash, I lose everything I wrote. That\'s how I learn the importance of doing backups and saving my work regularly.',
-    img: 'img1',
   },
   {
     id: 4,

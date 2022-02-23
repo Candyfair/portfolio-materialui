@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles';
 import TitleBar from 'src/components/TitleBar';
 import AboutMe from 'src/components/AboutMe';
 import Socials from 'src/components/Socials';
-import ProgrammingStory from 'src/components/ProgrammingStory';
+import TimelineMobile from 'src/components/TimelineMobile';
 import TimelineStory from 'src/components/TimelineStory';
 
 // === MUI
@@ -56,7 +56,7 @@ const About = () => {
 
         {/* Programming Story (mobile et desktop) */}
         <Stack className={classes.mobileView}>
-          <ProgrammingStory />
+          <TimelineMobile />
         </Stack>
 
         <Stack className={classes.desktopView}>

@@ -1,5 +1,5 @@
 // === IMPORTS
-import { Stack, Typography, Box } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import story from 'src/data/story';
