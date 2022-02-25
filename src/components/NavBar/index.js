@@ -1,7 +1,10 @@
 // === IMPORTS
 import { Stack, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
 import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { setModal } from '../../redux/actions/modals';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
@@ -20,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <Stack
@@ -46,6 +50,7 @@ const NavBar = () => {
       </Button>
       <Button
         className={classes.buttonStyle}
+        onClick={() => dispatch(setModal(true))}
       >
         Contact
       </Button>

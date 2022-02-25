@@ -1,11 +1,16 @@
 // === IMPORTS
 import { Stack, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
+
 import DownloadIcon from '@mui/icons-material/Download';
 
 import TitleBar from 'src/components/TitleBar';
-
 import Slider from './Slider';
+
+import { setModal } from '../../redux/actions/modals';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
@@ -59,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
 // === COMPONENT
 const Skills = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <Stack>
@@ -78,6 +85,7 @@ const Skills = () => {
         <Button
           variant="outlined"
           className={classes.buttonStyle}
+          onClick={() => navigate('/portfolio')}
         >
           Check my portfolio
         </Button>
@@ -94,6 +102,7 @@ const Skills = () => {
           disableElevation
           variant="contained"
           className={classes.contactStyle}
+          onClick={() => dispatch(setModal(true))}
         >
           Contact me
         </Button>
