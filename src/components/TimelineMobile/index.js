@@ -150,7 +150,7 @@ const TimelineMobile = () => {
                         onClick={handleBack}
                         sx={{ mt: 1, mr: 1 }}
                       >
-                        Back
+                        {index === 0 ? null : 'Back'}
                       </Button>
                     </div>
                   </Box>

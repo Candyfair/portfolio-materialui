@@ -1,11 +1,12 @@
 // == Import
 import { Routes, Route } from 'react-router-dom';
 
-import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material'; // Equivalent to reset.css
+import { ThemeProvider } from '@mui/material/styles';
 
 import Layout from 'src/components/Layout';
 import ScrollTop from 'src/components/ScrollTop';
+import ModalDisplay from 'src/components/ModalDisplay';
 
 import {
   Home,
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <ModalDisplay />
       </Layout>
     </div>
   </ThemeProvider>

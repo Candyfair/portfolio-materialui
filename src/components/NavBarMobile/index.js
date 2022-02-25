@@ -1,5 +1,6 @@
 // === IMPORTS
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { makeStyles } from '@mui/styles';
 import {
@@ -10,6 +11,8 @@ import ConstructionIcon from '@mui/icons-material/Construction';
 import BookIcon from '@mui/icons-material/Book';
 import FaceIcon from '@mui/icons-material/Face';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+
+import { setModal } from '../../redux/actions/modals';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 const NavBarMobile = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <Paper
@@ -66,6 +70,7 @@ const NavBarMobile = () => {
           label="Contact"
           icon={<MailOutlineIcon />}
           className={classes.iconStyle}
+          onClick={() => dispatch(setModal(true))}
         />
       </BottomNavigation>
 
