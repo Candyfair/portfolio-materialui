@@ -19,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   closeButton: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   backButton: {
     display: 'none',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'flex',
     },
 
