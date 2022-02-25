@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'normal',
     lineHeight: 1.2,
     padding: theme.spacing(2),
+    maxWidth: 400,
   },
   form: {
     display: 'flex',
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.error.main,
   },
   textInput: {
-    width: 325,
+    width: 400,
     [theme.breakpoints.up('sm')]: {
       width: '100%',
     },
