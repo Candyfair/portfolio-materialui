@@ -1,6 +1,6 @@
 // === IMPORTS
 import {
-  Stack, Typography, TextField, InputLabel, FormControl, Button,
+  Stack, Typography, TextField, Button,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
@@ -8,6 +8,9 @@ import Socials from 'src/components/Socials';
 
 // === MUI
 const useStyles = makeStyles((theme) => ({
+  contactForm: {
+    width: '100%',
+  },
   titleContact: {
     fontFamily: 'Degular Display',
     fontSize: 32,
@@ -23,11 +26,15 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'normal',
     lineHeight: 1.2,
     padding: theme.spacing(2),
-    maxWidth: 400,
+    [theme.breakpoints.up('sm')]: {
+      textAlign: 'center',
+    },
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
+    width: '100%',
+    padding: theme.spacing(2),
   },
   labels: {
     fontFamily: 'Apparat Medium, Sans-Serif',
@@ -40,9 +47,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.error.main,
   },
   textInput: {
-    width: 400,
+    width: '100%',
+    minWidth: '',
     [theme.breakpoints.up('sm')]: {
-      width: '100%',
+      width: 400,
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
@@ -72,6 +80,7 @@ const ContactForm = () => {
     <Stack
       alignContent="space-between"
       alignItems="center"
+      className={classes.contactForm}
     >
       {/* Text + contact form */}
       <Stack
