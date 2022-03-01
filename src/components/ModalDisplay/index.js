@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    minWidth: '300px',
+    minWidth: '325px',
     background: theme.palette.background.default,
     boxShadow: theme.custom.shadow.card,
     borderRadius: theme.shape.borderRadius,
@@ -43,14 +43,10 @@ const ModalDisplay = () => {
     <Modal
       open={modal}
       onClose={() => dispatch(setModal(false, 'none'))}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
     >
       <Box className={classes.modal}>
         <ModalHeader />
-        <Stack>
-          <ContactForm />
-        </Stack>
+        <ContactForm />
       </Box>
     </Modal>
   );
