@@ -55,6 +55,7 @@
     "@mui/material": "^5.4.2",
     "@mui/styles": "^5.4.2",
     "axios": "^0.26.0",
+    "babel": "^6.23.0",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
