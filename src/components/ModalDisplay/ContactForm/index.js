@@ -1,4 +1,7 @@
 // === IMPORTS
+import axios from 'axios';
+import { useState } from 'react';
+
 import {
   Stack, Typography, TextField, Button,
 } from '@mui/material';
@@ -72,8 +75,21 @@ const useStyles = makeStyles((theme) => ({
 const ContactForm = () => {
   const classes = useStyles();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const [sent, setSent] = useState(false);
+  const [text, setText] = useState('');
+  // const [email, setEmail] = useState('');
+
+  const handleSend = async () => {
+    setSent(true);
+    try {
+      await axios.post('http://localhost:4000/send_mail', {
+        text,
+        // email,
+      });
+    }
+    catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -96,57 +112,65 @@ const ContactForm = () => {
         {/* Contact Form */}
         <form
           className={classes.form}
-          onSubmit={handleSubmit}
+          onSubmit={handleSend}
         >
-          <Stack spacing={2}>
+          {!sent ? (
+            <Stack spacing={2}>
 
-            {/* E-mail input field */}
-            <Stack>
-              <Typography className={classes.labels}>
-                Your e-mail address <span className={classes.required}>*</span>
-              </Typography>
-              <TextField
-                required
-                autoComplete="off"
-                hiddenLabel
-                focused
-                id="email"
-                variant="outlined"
-                color="success"
-                className={classes.textInput}
-              />
-            </Stack>
-
-            {/* Message input field */}
-            <Stack>
-              <Typography className={classes.labels}>
-                Your message <span className={classes.required}>*</span>
-              </Typography>
-              <TextField
-                required
-                autoComplete="off"
-                hiddenLabel
-                id="message"
-                variant="outlined"
-                color="success"
-                multiline
-                minRows={4}
-                className={classes.textInput}
-              />
-              <Stack justifyContent="right" alignItems="flex-end">
-                <Button
-                  variant="contained"
-                  type="submit"
+              {/* E-mail input field */}
+              <Stack>
+                <Typography className={classes.labels}>
+                  Your e-mail address <span className={classes.required}>*</span>
+                </Typography>
+                <TextField
+                  required
+                  autoComplete="off"
+                  hiddenLabel
+                  focused
+                  id="email"
+                  variant="outlined"
                   color="success"
-                  disableElevation
-                  className={classes.buttonStyle}
-                >
-                  Send
-                </Button>
+                  className={classes.textInput}
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
+                />
               </Stack>
-            </Stack>
 
-          </Stack>
+              {/* Message input field */}
+              <Stack>
+                <Typography className={classes.labels}>
+                  Your message <span className={classes.required}>*</span>
+                </Typography>
+                <TextField
+                  required
+                  autoComplete="off"
+                  hiddenLabel
+                  id="message"
+                  variant="outlined"
+                  color="success"
+                  multiline
+                  minRows={4}
+                  className={classes.textInput}
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                />
+                <Stack justifyContent="right" alignItems="flex-end">
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    color="success"
+                    disableElevation
+                    className={classes.buttonStyle}
+                  >
+                    Send
+                  </Button>
+                </Stack>
+              </Stack>
+
+            </Stack>
+          ) : (
+            <Typography className={classes.textContact}>Email sent!</Typography>
+          )}
         </form>
 
       </Stack>
